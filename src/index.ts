@@ -1,3 +1,4 @@
+import { runAllExamples } from './examples/thread-pool-examples';
 import { ThreadPool } from './pools/ThreadPool';
 
 async function main() {
@@ -19,6 +20,7 @@ async function main() {
         }
 
         const results = await Promise.all(tasks);
+        await runAllExamples()
         console.log("🚀 ~ main ~ results:", results)
         console.timeEnd('Execution time');
 
